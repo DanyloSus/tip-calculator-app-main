@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: "Space Mono", monospace;
+}/*# sourceMappingURL=index.css.map */
