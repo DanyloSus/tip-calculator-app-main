@@ -13,7 +13,7 @@
     @apply text-grayish-cyan;
   }
   section {
-    @apply w-[412px];
+    @apply w-[412px] lg:w-full;
   }
   input {
     @apply bg-very-light-grayish-cyan h-12 rounded-lg text-right px-4 w-full text-very-dark-cyan text-xl hover:border-light-grayish-cyan active:border-light-grayish-cyan border transition-colors;
@@ -26,7 +26,7 @@
     }
   }
   h1 {
-    @apply text-strong-cyan text-5xl;
+    @apply text-strong-cyan text-5xl lg:text-3xl;
     &::before {
       content: "$";
     }

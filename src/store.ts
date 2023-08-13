@@ -6,6 +6,7 @@ interface TipStore {
   changeBill: (e: any) => void;
   tip: number | null;
   changeTip: (e: any) => void;
+  customTip: number | null;
   staticChangeTip: (per: number) => void;
   numberOfPeople: number | null;
   changeNumberOfPeople: (e: any) => void;
@@ -21,11 +22,12 @@ const useTipStore = create<TipStore>()(
       set(() => ({ bill: e.target.value }));
     },
     tip: null,
-    changeTip: (e) => {
-      set(() => ({ tip: e.target.value }));
-    },
     staticChangeTip: (per) => {
-      set(() => ({ tip: per }));
+      set(() => ({ tip: per, customTip: null }));
+    },
+    customTip: null,
+    changeTip: (e) => {
+      set(() => ({ customTip: e.target.value, tip: null }));
     },
     numberOfPeople: null,
     changeNumberOfPeople: (e) => {
@@ -34,7 +36,7 @@ const useTipStore = create<TipStore>()(
     tipAmount: 0.0,
     total: 0.0,
     reset: () => {
-      set(() => ({ bill: 0, tip: 0, numberOfPeople: 0 }));
+      set(() => ({ bill: 0, tip: 0, numberOfPeople: 0, customTip: 0 }));
     },
   }))
 );

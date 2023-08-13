@@ -9,10 +9,11 @@ const Left = () => {
     staticChangeTip,
     numberOfPeople,
     changeNumberOfPeople,
+    customTip,
   } = useTipStore((s) => s);
 
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 lg:gap-8">
       <div className="relative">
         <p>Bill</p>
         <img
@@ -30,7 +31,7 @@ const Left = () => {
       </div>
       <div>
         <p>Select Tip %</p>
-        <div className="grid grid-rows-2 grid-cols-3 gap-[14px]">
+        <div className="grid grid-rows-2 grid-cols-3 gap-[14px] lg:grid-rows-3 lg:grid-cols-2">
           <div
             onClick={() => staticChangeTip(5)}
             style={
@@ -100,7 +101,7 @@ const Left = () => {
             type="number"
             name="tip"
             placeholder="Custom"
-            value={tip ? tip : ""}
+            value={customTip ? customTip : ""}
             onChange={changeTip}
           />
         </div>
