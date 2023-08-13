@@ -38,4 +38,36 @@
   div.grid input {
     @apply bg-very-light-grayish-cyan text-grayish-cyan flex justify-center items-center h-12 rounded-lg;
   }
+}
+.img_anim {
+  animation: img_anim 1s ease-in-out 0.5s backwards;
+}
+
+@keyframes img_anim {
+  0% {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+.main_anim {
+  animation: main_anim 1s ease-in-out 1s backwards;
+}
+
+@keyframes main_anim {
+  0% {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */
